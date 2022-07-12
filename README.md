@@ -8,3 +8,8 @@ For further reference, please consider the following sections:
 
 ### Guides
 The following guides illustrate how to use the basic Jaxb with a data adapter.
+
+### Requires 
+jdk 1.8
+
+Junit 4.n
