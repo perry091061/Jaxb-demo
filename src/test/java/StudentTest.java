@@ -26,15 +26,15 @@ public class StudentTest {
     public void writesStudentDataToXMLFile() throws JAXBException {
         Marshaller marshaller = context.createMarshaller(); //
         Student studentOut = new Student(1L,"Babbage","Charles", LocalDate.of(1791,12,26));
-        marshaller.marshal( studentOut, new File("./src/test/resources/Student.xml"));
-        assertTrue(new File("./src/test/resources/Student.xml").exists());
+        marshaller.marshal( studentOut, new File("Student.xml"));
+        assertTrue(new File("Student.xml").exists());
 
     }
 
     @Test
     public void readsStudentDataFromAnXMLFile() throws JAXBException, FileNotFoundException {
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        Student studentIn = (Student) unmarshaller.unmarshal(new FileReader("./src/test/resources/Student.xml"));
+        Student studentIn = (Student) unmarshaller.unmarshal(new FileReader("Student.xml"));
         assertNotNull(studentIn);
         System.out.println(studentIn);
 
